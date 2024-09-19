@@ -49,8 +49,9 @@ view: order_items {
   measure: average_sale_price {
     type: average
     sql: ${sale_price} ;;  }
-  measure: count {
-    type: count
+  measure: order_count {
+    type: count_distinct
+    sql: ${TABLE}.order_id ;;
     drill_fields: [id, inventory_items.id, orders.id]
   }
 }

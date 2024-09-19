@@ -24,8 +24,9 @@ view: users {
 
   dimension: age_tiered {
     type: tier
-    bins: [10,20,30,40,50,60,70,80,90,100]
+    tiers: [20,30,40,50,60,70,80,90]
     sql: ${TABLE}.age ;;
+    style: integer
   }
 
   # A measure is a field that uses a SQL aggregate function. Here are defined sum and average
