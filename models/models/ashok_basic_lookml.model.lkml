@@ -22,6 +22,7 @@ persist_with: ashok_basic_lookml_default_datagroup
 # To see the Explore you’re building, navigate to the Explore menu and select an Explore under "Ashok Basic Lookml"
 
 explore: inventory_items {
+  label: "Inventory"
   join: products {
     type: left_outer
     sql_on: ${inventory_items.product_id} = ${products.id} ;;
